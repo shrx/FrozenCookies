@@ -2,7 +2,7 @@
 var scriptElement = document.getElementById('frozenCookieScript') !== null ?
     document.getElementById('frozenCookieScript') :
     document.getElementById('modscript_frozen_cookies');
-var baseUrl = 'https://cdn.jsdelivr.net/gh/shrx/FrozenCookies@2423d4a81fd2cce8a4972c9c836890259adbbf11/';
+var baseUrl = 'https://cdn.jsdelivr.net/gh/shrx/FrozenCookies@d442b950357208af5f5ba7d2ef9e473b3e01f6d7/';
 var FrozenCookies = {
     'baseUrl': baseUrl,
     'branch': '',
