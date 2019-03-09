@@ -4,7 +4,7 @@ var scriptElement = document.getElementById('frozenCookieScript') !== null ?
     document.getElementById('modscript_frozen_cookies');
 var baseUrl = scriptElement !== null ?
     scriptElement.getAttribute('src').replace(/\/frozen_cookies\.js$/, '') :
-    'https://mtarnuhal.github.io/FrozenCookies/';
+    'https://github.com/shrx/FrozenCookies/blob/temporary-selfhost/';
 var FrozenCookies = {
     'baseUrl': baseUrl,
     'branch': '',
