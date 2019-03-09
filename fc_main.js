@@ -2176,7 +2176,8 @@ function autoGodzamokAction() {
     if (!T) return; //Just leave if Pantheon isn't here yet
     //Now has option to not trigger until current Devastation buff expires (i.e. won't rapidly buy & sell cursors throughout Godzamok duration)
     //added Farms to autoGodzamok selling. 1 farm always left to prevent garden from disappearing
-	if (Game.hasGod('ruin') && Game.Objects['Cursor'].amount > 10 && Game.Objects['Farm'].amount > 10 && (!Game.hasBuff('Devastation') || FrozenCookies.autoGodzamok == 1 || FrozenCookies.autoGodzamok == 3) && hasClickBuff()) {
+    //added check if cps multiplier is reasonable
+	if (cpsBonus() >= 0.5 && Game.hasGod('ruin') && Game.Objects['Cursor'].amount > 10 && Game.Objects['Farm'].amount > 10 && (!Game.hasBuff('Devastation') || FrozenCookies.autoGodzamok == 1 || FrozenCookies.autoGodzamok == 3) && hasClickBuff()) {
         var count = Game.Objects['Cursor'].amount;
 	var count2 = Game.Objects['Farm'].amount-1;
         Game.Objects['Cursor'].sell(count);
