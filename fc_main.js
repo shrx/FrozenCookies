@@ -678,6 +678,7 @@ function autoCast() {
                 if(cpsBonus() >= FrozenCookies.minCpSMult || Game.hasBuff('Dragonflight')) {
                     M.castSpell(FTHOF);
                     logEvent('AutoSpell', 'Cast Force the Hand of Fate');
+                    logEvent('AutoSpell', 'cpsBonus = ' + Beautify(cpsBonus()));
                 }
                 return;
             case 3:
