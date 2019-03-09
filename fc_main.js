@@ -675,7 +675,7 @@ function autoCast() {
             case 2:
                 var FTHOF = M.spellsById[1];
                 if (M.magicM < Math.floor(FTHOF.costMin + FTHOF.costPercent*M.magicM)) return;
-                if(cpsBonus() >= FrozenCookies.minCpSMult || Game.hasBuff('Dragonflight') || Game.hasBuff('Click frenzy')) {
+                if(cpsBonus() >= FrozenCookies.minCpSMult || Game.hasBuff('Dragonflight')) {
                     M.castSpell(FTHOF);
                     logEvent('AutoSpell', 'Cast Force the Hand of Fate');
                 }
@@ -2177,7 +2177,7 @@ function autoGodzamokAction() {
     //Now has option to not trigger until current Devastation buff expires (i.e. won't rapidly buy & sell cursors throughout Godzamok duration)
     //added Farms to autoGodzamok selling. 1 farm always left to prevent garden from disappearing
     //added check if cps multiplier is reasonable
-	if (cpsBonus() >= 0.5 && Game.hasGod('ruin') && Game.Objects['Cursor'].amount > 10 && Game.Objects['Farm'].amount > 10 && (!Game.hasBuff('Devastation') || FrozenCookies.autoGodzamok == 1 || FrozenCookies.autoGodzamok == 3) && hasClickBuff()) {
+	if ( (!Game.hasBuff('Cursed finger')) && Game.hasGod('ruin') && Game.Objects['Cursor'].amount > 10 && Game.Objects['Farm'].amount > 10 && (!Game.hasBuff('Devastation') || FrozenCookies.autoGodzamok == 1 || FrozenCookies.autoGodzamok == 3) && hasClickBuff()) {
         var count = Game.Objects['Cursor'].amount;
 	var count2 = Game.Objects['Farm'].amount-1;
         Game.Objects['Cursor'].sell(count);
